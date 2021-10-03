@@ -41,15 +41,9 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:multidex:1.0.3'
-    implementation project(path: ':FORTSDKv1.5')
-    implementation 'com.victor:lib:1.0.1'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.shamanland:fonticon:0.1.8'
-    implementation('com.nispok:snackbar:2.11.+') {
-        // exclusion is not necessary, but generally a good idea.
+    implementation("com.amazon:fortpayment:+:release@aar"){
+        transitive = true
     }
-    implementation 'com.google.guava:guava:19.0'
-    implementation 'org.bouncycastle:bcprov-jdk16:1.46'
     implementation 'commons-codec:commons-codec:1.10'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'

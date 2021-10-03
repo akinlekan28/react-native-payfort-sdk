@@ -13,10 +13,11 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.uimanager.IllegalViewOperationException;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.payfort.fort.android.sdk.base.FortSdk;
-import com.payfort.fort.android.sdk.base.callbacks.FortCallBackManager;
-import com.payfort.fort.android.sdk.base.callbacks.FortCallback;
-import com.payfort.sdk.android.dependancies.base.FortInterfaces;
+import com.payfort.fortpaymentsdk.FortSdk;
+import com.payfort.fortpaymentsdk.callbacks.FortCallBackManager;
+import com.payfort.fortpaymentsdk.callbacks.FortCallback;
+import com.payfort.fortpaymentsdk.callbacks.FortInterfaces;
+import com.payfort.fortpaymentsdk.domain.model.FortRequest;
 
 
 import java.lang.reflect.Type;

@@ -1,0 +1,18 @@
+R_DEF: Internal format may change without notice
+local
+id amountTV
+id appbarLayout
+id btnPay
+id cardHolderNameView
+id etCardCvv
+id etCardExpiry
+id etCardNumberView
+id guideline
+id guideline2
+id linearLayout
+id loadingContainer
+id progressLoading
+id rememberMeRL
+id rememberMeTB
+id toolbar
+layout activity_cc_payment

@@ -6,10 +6,11 @@ import android.util.Log;
 
 import com.RNPayfortSdk.network.beans.PayFortData;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.payfort.fort.android.sdk.base.FortSdk;
-import com.payfort.fort.android.sdk.base.callbacks.FortCallBackManager;
-import com.payfort.sdk.android.dependancies.base.FortInterfaces;
-import com.payfort.sdk.android.dependancies.models.FortRequest;
+import com.payfort.fortpaymentsdk.FortSdk;
+import com.payfort.fortpaymentsdk.callbacks.FortCallBackManager;
+import com.payfort.fortpaymentsdk.callbacks.FortCallback;
+import com.payfort.fortpaymentsdk.callbacks.FortInterfaces;
+import com.payfort.fortpaymentsdk.domain.model.FortRequest;
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
