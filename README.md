@@ -61,7 +61,7 @@
    ![](Screenshot.png)
 5. Add `pod 'JVFloatLabeledTextField'` in the pod file.
 6. open iOS folder in terminal and run command "pod install" .
-7. Open your project on xcode, navigate to build phases → Copy Bundle Resources → Add PayFortView2.xib from node_modules/@logisticinfotech/react-native-payfort-sdk/ios/PayFortView2.xib
+7. Open your project on xcode, navigate to build phases → Copy Bundle Resources → Add PayFortView2.xib from `node_modules/@logisticinfotech/react-native-payfort-sdk/ios/PayFortView2.xib`
 
 ## Usage
 
