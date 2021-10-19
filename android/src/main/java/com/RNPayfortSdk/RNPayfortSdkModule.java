@@ -88,21 +88,21 @@ public class RNPayfortSdkModule extends ReactContextBaseJavaModule implements Ac
                     .setCallback(new FortInterfaces.OnTnxProcessed() {
                         @Override
                         public void onCancel(Map<String, Object> requestMap, Map<String, Object> responseMap) {
-                            Toast.makeText(reactContext, "Payment cancel by user", Toast.LENGTH_SHORT).show();
-//                            Log.d("Hello", "onCancel() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
+                           // Toast.makeText(reactContext, "Payment cancel by user", Toast.LENGTH_SHORT).show();
+                            Log.d("Hello", "onCancel() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
                             errorCallback.invoke(converMapToJson(responseMap));
                         }
                         @Override
                         public void onSuccess(Map<String, Object> requestMap, Map<String, Object> responseMap) {
-                            Toast.makeText(reactContext, "Payment Success", Toast.LENGTH_SHORT).show();
-//                            Log.d("Hello", "onSuccess() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
+                            //Toast.makeText(reactContext, "Payment Success", Toast.LENGTH_SHORT).show();
+                            Log.d("Hello", "onSuccess() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
                             successCallback.invoke(converMapToJson(responseMap));
 
                         }
                         @Override
                         public void onFailure(Map<String, Object> requestMap, Map<String, Object> responseMap) {
-                            Toast.makeText(reactContext, "Payment fail", Toast.LENGTH_SHORT).show();
-//                            Log.d("Hello", "onFailure() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
+                            //Toast.makeText(reactContext, "Payment fail", Toast.LENGTH_SHORT).show();
+                            Log.d("Hello", "onFailure() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
                             errorCallback.invoke(converMapToJson(responseMap));
                         }
                     })
@@ -110,6 +110,7 @@ public class RNPayfortSdkModule extends ReactContextBaseJavaModule implements Ac
 
             liFortPayment.requestPayment();
         }catch (IllegalViewOperationException e) {
+            Log.d("{\"response_message\":"+e.getMessage()+"}");
             errorCallback.invoke("{\"response_message\":"+e.getMessage()+"}");
         }
     }
