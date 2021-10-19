@@ -50,7 +50,7 @@ public class RNPayfortSdkModule extends ReactContextBaseJavaModule implements Ac
 
     @ReactMethod
     public void Pay(String parameters, Callback successCallback, Callback errorCallback){
-        Log.d(getReactApplicationContext(),"PayMent");
+        Log.d("Test1","PayMent");
 
         Gson gson=new Gson();
         RequestParameterBean requestParameterBean =gson.fromJson(parameters, RequestParameterBean.class);
