@@ -18,7 +18,7 @@ import com.payfort.fortpaymentsdk.callbacks.FortCallBackManager;
 import com.payfort.fortpaymentsdk.callbacks.FortCallback;
 import com.payfort.fortpaymentsdk.callbacks.FortInterfaces;
 import com.payfort.fortpaymentsdk.domain.model.FortRequest;
-
+import android.widget.Toast;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +50,7 @@ public class RNPayfortSdkModule extends ReactContextBaseJavaModule implements Ac
 
     @ReactMethod
     public void Pay(String parameters, Callback successCallback, Callback errorCallback){
-//        Toast.makeText(getReactApplicationContext(),"PayMent",Toast.LENGTH_LONG);
+        Toast.makeText(getReactApplicationContext(),"PayMent",Toast.LENGTH_LONG);
 
         Gson gson=new Gson();
         RequestParameterBean requestParameterBean =gson.fromJson(parameters, RequestParameterBean.class);
@@ -88,20 +88,20 @@ public class RNPayfortSdkModule extends ReactContextBaseJavaModule implements Ac
                     .setCallback(new FortInterfaces.OnTnxProcessed() {
                         @Override
                         public void onCancel(Map<String, Object> requestMap, Map<String, Object> responseMap) {
-//                            Toast.makeText(reactContext, "Payment cancel by user", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(reactContext, "Payment cancel by user", Toast.LENGTH_SHORT).show();
 //                            Log.d("Hello", "onCancel() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
                             errorCallback.invoke(converMapToJson(responseMap));
                         }
                         @Override
                         public void onSuccess(Map<String, Object> requestMap, Map<String, Object> responseMap) {
-//                            Toast.makeText(reactContext, "Payment Success", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(reactContext, "Payment Success", Toast.LENGTH_SHORT).show();
 //                            Log.d("Hello", "onSuccess() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
                             successCallback.invoke(converMapToJson(responseMap));
 
                         }
                         @Override
                         public void onFailure(Map<String, Object> requestMap, Map<String, Object> responseMap) {
-//                            Toast.makeText(reactContext, "Payment fail", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(reactContext, "Payment fail", Toast.LENGTH_SHORT).show();
 //                            Log.d("Hello", "onFailure() called with: map = [" + requestMap + "], map1 = [" + responseMap + "]");
                             errorCallback.invoke(converMapToJson(responseMap));
                         }
