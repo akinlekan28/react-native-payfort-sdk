@@ -13,10 +13,10 @@ import retrofit2.http.POST;
 public interface RestApi {
 
     @Headers("Content-Type: application/json")
-    @POST("https://sbpaymentservices.payfort.com/FortAPI/paymentApi")
+    @POST("https://sbpaymentservices.payfort.com/FortAPI/paymentApi/")
     Observable<Response<PayFortData>> testPostRequest(@Body Map<String, Object> map);
 
     @Headers("Content-Type: application/json")
-    @POST("https://paymentservices.payfort.com/FortAPI/paymentApi")
+    @POST("https://paymentservices.payfort.com/FortAPI/paymentApi/")
     Observable<Response<PayFortData>> postRequest(@Body Map<String, Object> map);
 }
