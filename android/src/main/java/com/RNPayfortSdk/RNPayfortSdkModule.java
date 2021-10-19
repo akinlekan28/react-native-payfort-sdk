@@ -2,6 +2,7 @@ package com.RNPayfortSdk;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 
 import com.RNPayfortSdk.network.LIFortPayment;
 import com.RNPayfortSdk.network.beans.RequestParameterBean;
@@ -18,7 +19,6 @@ import com.payfort.fortpaymentsdk.callbacks.FortCallBackManager;
 import com.payfort.fortpaymentsdk.callbacks.FortCallback;
 import com.payfort.fortpaymentsdk.callbacks.FortInterfaces;
 import com.payfort.fortpaymentsdk.domain.model.FortRequest;
-import android.widget.Toast;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +50,7 @@ public class RNPayfortSdkModule extends ReactContextBaseJavaModule implements Ac
 
     @ReactMethod
     public void Pay(String parameters, Callback successCallback, Callback errorCallback){
-        Toast.makeText(getReactApplicationContext(),"PayMent",Toast.LENGTH_LONG);
+        Log.d(getReactApplicationContext(),"PayMent");
 
         Gson gson=new Gson();
         RequestParameterBean requestParameterBean =gson.fromJson(parameters, RequestParameterBean.class);
