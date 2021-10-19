@@ -110,7 +110,7 @@ public class RNPayfortSdkModule extends ReactContextBaseJavaModule implements Ac
 
             liFortPayment.requestPayment();
         }catch (IllegalViewOperationException e) {
-            Log.d("{\"response_message\","+e.getMessage()+"}");
+            // Log.d("{\"response_message\","+e.getMessage()+"}");
             errorCallback.invoke("{\"response_message\":"+e.getMessage()+"}");
         }
     }
