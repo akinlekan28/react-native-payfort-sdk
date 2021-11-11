@@ -14,10 +14,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6O-kl-D2L">
-                    <rect key="frame" x="0.0" y="90" width="320" height="55"/>
+                    <rect key="frame" x="0.0" y="120" width="320" height="65"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBw-I7-XDS">
-                            <rect key="frame" x="78" y="34" width="165" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBw-I7-XDS">
+                            <rect key="frame" x="77.5" y="25" width="165" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="2WM-YJ-QMt"/>
                                 <constraint firstAttribute="width" constant="165" id="mA7-kb-ZvL"/>
@@ -30,12 +30,44 @@
                     <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="NBw-I7-XDS" firstAttribute="centerX" secondItem="R6O-kl-D2L" secondAttribute="centerX" id="Bcn-5O-Lwl"/>
-                        <constraint firstItem="NBw-I7-XDS" firstAttribute="top" secondItem="R6O-kl-D2L" secondAttribute="top" constant="18" id="Wgp-OX-Hy2"/>
-                        <constraint firstAttribute="height" constant="55" id="iQK-yG-1dv"/>
+                        <constraint firstItem="NBw-I7-XDS" firstAttribute="top" secondItem="R6O-kl-D2L" secondAttribute="top" constant="25" id="Wgp-OX-Hy2"/>
+                        <constraint firstAttribute="height" constant="65" id="iQK-yG-1dv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anP-iu-im0">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsx-HH-B2G">
+                            <rect key="frame" x="79" y="73" width="162" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="162" id="bIO-MC-izw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="highlightedColor" red="0.19239571690000001" green="0.28074669839999999" blue="0.5019840002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbW-sd-CGh">
+                            <rect key="frame" x="8" y="50" width="55" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="JKo-c0-79V" userLabel="width = 90"/>
+                                <constraint firstAttribute="height" constant="60" id="jA2-Sd-Pav" userLabel="height = 120"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="PayFortSDK.bundle/Arrow.png">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.19239571690000001" green="0.28074669839999999" blue="0.5019840002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="dsx-HH-B2G" firstAttribute="centerX" secondItem="anP-iu-im0" secondAttribute="centerX" id="92C-jh-nwo"/>
+                        <constraint firstItem="HbW-sd-CGh" firstAttribute="top" secondItem="anP-iu-im0" secondAttribute="top" constant="50" id="D4Y-55-9Yf"/>
+                        <constraint firstAttribute="height" constant="120" id="j33-dV-GFS" userLabel="height = 66"/>
+                        <constraint firstItem="HbW-sd-CGh" firstAttribute="left" secondItem="anP-iu-im0" secondAttribute="left" constant="8" id="tTm-8y-hpf"/>
+                        <constraint firstItem="dsx-HH-B2G" firstAttribute="top" secondItem="anP-iu-im0" secondAttribute="top" constant="73" id="xfj-14-Nff"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-nM-9x3">
-                    <rect key="frame" x="0.0" y="155" width="320" height="320"/>
+                    <rect key="frame" x="0.0" y="176" width="320" height="370"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-Y1-NO6">
                             <rect key="frame" x="255" y="24.5" width="35" height="21"/>
@@ -126,18 +158,7 @@
                                 <constraint firstAttribute="height" constant="0.5" id="hFY-TI-bWe"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0l-0X-Kv1">
-                            <rect key="frame" x="30" y="155" width="260" height="60"/>
-                            <color key="backgroundColor" red="0.21568627450980393" green="0.68627450980392157" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="60" id="Je4-2j-dvI"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                            <state key="normal" title="Pay">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIN-BV-L1D">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIN-BV-L1D">
                             <rect key="frame" x="30" y="143" width="260" height="0.0"/>
                             <subviews>
                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE THIS CARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byn-BT-y5J">
@@ -164,6 +185,17 @@
                                 <constraint firstItem="Byn-BT-y5J" firstAttribute="top" secondItem="DIN-BV-L1D" secondAttribute="top" constant="13" id="i5Y-WH-GvY"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0l-0X-Kv1">
+                            <rect key="frame" x="30" y="201" width="260" height="60"/>
+                            <color key="backgroundColor" red="0.19239571690000001" green="0.28074669839999999" blue="0.5019840002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Je4-2j-dvI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <state key="normal" title="Pay">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -197,10 +229,10 @@
                         <constraint firstItem="AKX-M4-wYm" firstAttribute="right" secondItem="x3J-f0-7ei" secondAttribute="right" id="ZBS-sF-59j"/>
                         <constraint firstItem="uON-lu-xri" firstAttribute="bottom" secondItem="cXh-Ff-AKK" secondAttribute="top" id="cpD-gv-fla"/>
                         <constraint firstItem="Xbp-iB-9fo" firstAttribute="top" secondItem="c8b-nM-9x3" secondAttribute="top" constant="15" id="eXI-8h-6w2"/>
-                        <constraint firstItem="e0l-0X-Kv1" firstAttribute="top" secondItem="DIN-BV-L1D" secondAttribute="bottom" constant="12" id="gM5-SC-l5T"/>
+                        <constraint firstItem="e0l-0X-Kv1" firstAttribute="top" secondItem="DIN-BV-L1D" secondAttribute="bottom" constant="46" id="gM5-SC-l5T"/>
                         <constraint firstAttribute="right" secondItem="7xG-K9-joC" secondAttribute="right" constant="30" id="hLM-4H-O1K"/>
                         <constraint firstItem="x3J-f0-7ei" firstAttribute="left" secondItem="c8b-nM-9x3" secondAttribute="left" constant="30" id="hRX-h8-ceY"/>
-                        <constraint firstAttribute="height" constant="320" id="jOo-pB-i9z"/>
+                        <constraint firstAttribute="height" constant="370" id="jOo-pB-i9z" userLabel="height = 370"/>
                         <constraint firstAttribute="right" secondItem="4tg-iD-9M7" secondAttribute="right" constant="30" id="k9e-En-I6b"/>
                         <constraint firstItem="XNQ-aE-hyE" firstAttribute="left" secondItem="c8b-nM-9x3" secondAttribute="left" constant="30" id="kf3-dC-TiI"/>
                         <constraint firstItem="XNQ-aE-hyE" firstAttribute="top" secondItem="AKX-M4-wYm" secondAttribute="bottom" id="nYd-Qz-Lxh"/>
@@ -211,38 +243,6 @@
                         <constraint firstItem="4tg-iD-9M7" firstAttribute="left" secondItem="cXh-Ff-AKK" secondAttribute="right" constant="14" id="yGo-6k-ckq"/>
                     </constraints>
                 </view>
-                <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anP-iu-im0">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Credit Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsx-HH-B2G">
-                            <rect key="frame" x="79" y="81" width="162" height="20"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="162" id="bIO-MC-izw"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbW-sd-CGh">
-                            <rect key="frame" x="8" y="62" width="40" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="45" id="JKo-c0-79V"/>
-                                <constraint firstAttribute="height" constant="50" id="jA2-Sd-Pav"/>
-                            </constraints>
-                            <state key="normal" backgroundImage="PayFortSDK.bundle/Arrow.png">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstItem="dsx-HH-B2G" firstAttribute="centerX" secondItem="anP-iu-im0" secondAttribute="centerX" id="92C-jh-nwo"/>
-                        <constraint firstItem="HbW-sd-CGh" firstAttribute="top" secondItem="anP-iu-im0" secondAttribute="top" constant="21" id="D4Y-55-9Yf"/>
-                        <constraint firstAttribute="height" constant="90" id="j33-dV-GFS"/>
-                        <constraint firstItem="HbW-sd-CGh" firstAttribute="left" secondItem="anP-iu-im0" secondAttribute="left" constant="4" id="tTm-8y-hpf"/>
-                        <constraint firstItem="dsx-HH-B2G" firstAttribute="top" secondItem="anP-iu-im0" secondAttribute="top" constant="28" id="xfj-14-Nff"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -251,7 +251,7 @@
                 <constraint firstAttribute="right" secondItem="anP-iu-im0" secondAttribute="right" id="VUE-Es-kea"/>
                 <constraint firstAttribute="right" secondItem="c8b-nM-9x3" secondAttribute="right" id="cv5-pL-2E6"/>
                 <constraint firstItem="c8b-nM-9x3" firstAttribute="left" secondItem="M1L-v1-Ywo" secondAttribute="left" id="emB-rq-Jwg"/>
-                <constraint firstItem="c8b-nM-9x3" firstAttribute="top" secondItem="anP-iu-im0" secondAttribute="bottom" constant="65" id="lf7-gR-yYM"/>
+                <constraint firstItem="c8b-nM-9x3" firstAttribute="top" secondItem="anP-iu-im0" secondAttribute="bottom" constant="56" id="lf7-gR-yYM"/>
                 <constraint firstItem="R6O-kl-D2L" firstAttribute="top" secondItem="anP-iu-im0" secondAttribute="bottom" id="prB-TY-Gqn"/>
                 <constraint firstItem="anP-iu-im0" firstAttribute="left" secondItem="M1L-v1-Ywo" secondAttribute="left" id="saa-ns-rdQ"/>
                 <constraint firstItem="R6O-kl-D2L" firstAttribute="left" secondItem="M1L-v1-Ywo" secondAttribute="left" id="wWN-va-jZN"/>
@@ -275,7 +275,7 @@
                 <outlet property="titleLbl" destination="dsx-HH-B2G" id="gRc-sT-YXv"/>
                 <outlet property="titleView" destination="anP-iu-im0" id="azi-4U-ui7"/>
             </connections>
-            <point key="canvasLocation" x="129.375" y="126.7605633802817"/>
+            <point key="canvasLocation" x="131" y="127"/>
         </view>
     </objects>
     <designables>
