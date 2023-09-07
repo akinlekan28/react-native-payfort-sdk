@@ -16,7 +16,7 @@ public class RestApiBuilder {
 
         else {
             return restApi = new Retrofit.Builder()
-                    .baseUrl("https://sbpaymentservices.payfort.com/FortAPI/paymentApi")
+                    .baseUrl("https://sbpaymentservices.payfort.com/FortAPI/paymentApi/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build().create(RestApi.class);
